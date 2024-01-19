@@ -33,13 +33,13 @@ let count = vowelCount(sentence);
     // { Question 3 }
 //  Using a Prompt allow user to enter numbers separated by commas then print the sum of the numbers  
 
-let userInputs = prompt("Enter numbers seperating it with Commas")
+// let userInputs = prompt("Enter numbers seperating it with Commas")
 
-let numbersArray = userInputs.split(",")
+// let numbersArray = userInputs.split(",")
 
-let numberArray = numbersArray.map(Number);
+// let numberArray = numbersArray.map(Number);
 
-let sum = numberArray.reduce((accumilator, number) => accumilator + number, 0);
+// let sum = numberArray.reduce((accumilator, number) => accumilator + number, 0);
 
 // console.log("Sum of the numbers:", sum)
 
@@ -70,6 +70,24 @@ let chunkSize = 3;
 let subarrays = ChunkArray(currentArray, chunkSize);
 
 // console.log(subarrays)
+
+    //{ Question 6 }
+//  Given an integer, return an integer that is reverse ordering the numbers 
+
+
+function reverseInteger(num) {
+    const reversedString = num.toString().split('').reverse().join('');
+    const reversedNumber = parseInt(reversedString, 10);
+
+    return reversedNumber;
+}
+
+
+let theNumber = 12345;
+let reversedNumber = reverseInteger(theNumber);
+
+
+console.log(reversedNumber);
 
 
 
