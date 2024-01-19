@@ -33,15 +33,43 @@ let count = vowelCount(sentence);
     // { Question 3 }
 //  Using a Prompt allow user to enter numbers separated by commas then print the sum of the numbers  
 
-// let userInputs = prompt("Enter numbers seperating it with Commas")
+const readline = require('readline');
 
-// let numbersArray = userInputs.split(",")
 
-// let numberArray = numbersArray.map(Number);
+let userInputs = prompt("Enter numbers seperating it with Commas")
 
-// let sum = numberArray.reduce((accumilator, number) => accumilator + number, 0);
+let numbersArray = userInputs.split(",")
+
+let numberArray = numbersArray.map(Number);
+
+let sum = numberArray.reduce((accumilator, number) => accumilator + number, 0);
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
 
 // console.log("Sum of the numbers:", sum)
+
+
+// Question 4
+
+//  PALINDROME –A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward  
+// Write a program that checks whether a word is a palindrome or not.  
+// Examples of a palindromes  
+// (race car) 
+
+function palindrome(theWord) {
+    let reversedWord = theWord.split('').reverse('').join('');
+    if(reversedWord == theWord){
+        return (`${theWord} is a palindrome`)
+    } else {
+        return (`${theWord} is not a palindrome`)
+    }
+
+}
+
+// console.log(palindrome("civic"))            
 
 
 // { Question 5 }
